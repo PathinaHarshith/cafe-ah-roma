@@ -86,14 +86,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-cream selection:bg-primary selection:text-white font-sans text-charcoal overflow-x-clip">
-      {/* Sticky Navigation Wrapper (fades in on scroll - overlay) */}
-      <div 
-        className="fixed top-0 left-0 right-0 z-50 transition-opacity duration-100 ease-out"
-        style={{ 
-          opacity: zoomProgress,
-          pointerEvents: zoomProgress > 0.1 ? "auto" : "none"
-        }}
-      >
+      {/* Sticky Navigation Wrapper (fixed overlay) */}
+      <div className="fixed top-0 left-0 right-0 z-50">
         <Header />
       </div>
 
