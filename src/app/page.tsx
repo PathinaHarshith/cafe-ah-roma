@@ -80,10 +80,6 @@ export default function Home() {
     };
   }, []);
 
-  // Split scroll into Phase 1 (zoom/text fade in: 0% to 30%) and Phase 2 (shrink/parallax: 30% to 100%)
-  const zoomProgress = Math.min(scrollProgress / 0.3, 1);
-  const shrinkProgress = scrollProgress > 0.3 ? (scrollProgress - 0.3) / 0.7 : 0;
-
   return (
     <div className="flex flex-col min-h-screen bg-cream selection:bg-primary selection:text-white font-sans text-charcoal overflow-x-clip">
       {/* Sticky Navigation Wrapper (fixed overlay) */}
@@ -104,15 +100,15 @@ export default function Home() {
           <div className="absolute inset-0 bg-charcoal z-0" />
           <div 
             className="absolute inset-0 bg-cream z-0 pointer-events-none transition-opacity duration-100 ease-out" 
-            style={{ opacity: shrinkProgress }}
+            style={{ opacity: scrollProgress }}
           />
 
           {/* Scaling Card Wrapper */}
           <div 
             className="relative w-[100vw] h-[100vh] overflow-hidden flex items-center justify-center will-change-transform transition-all duration-100 ease-out"
             style={{
-              transform: `scale(${1 - shrinkProgress * 0.12})`,
-              borderRadius: `${shrinkProgress * 48}px`,
+              transform: `scale(${1 - scrollProgress * 0.12})`,
+              borderRadius: `${scrollProgress * 48}px`,
             }}
           >
             {/* Background Video with Dark & Warm Overlay */}
@@ -125,19 +121,17 @@ export default function Home() {
                 playsInline
                 className="w-full h-full object-cover transition-transform duration-100 ease-out"
                 style={{
-                  transform: `scale(${1 + zoomProgress * 0.25 - shrinkProgress * 0.15}) translateY(${shrinkProgress * 60}px) translateZ(0)`
+                  transform: `scale(${1.25 - scrollProgress * 0.15}) translateY(${scrollProgress * 60}px) translateZ(0)`
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/85" />
             </div>
 
-            {/* Content Container (Fades in during Phase 1, floats up during Phase 2) */}
+            {/* Content Container (Fully visible on load, floats up on scroll) */}
             <div 
               className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 flex flex-col items-center text-center z-10 transition-all duration-100 ease-out"
               style={{
-                opacity: zoomProgress,
-                transform: `translateY(${-shrinkProgress * 50}px) translateZ(0)`,
-                pointerEvents: zoomProgress > 0.1 ? "auto" : "none"
+                transform: `translateY(${-scrollProgress * 50}px) translateZ(0)`,
               }}
             >
               {/* Tagline Badge */}
