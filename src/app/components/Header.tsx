@@ -72,11 +72,11 @@ export default function Header() {
           {/* Right Actions - Desktop */}
           <div className="hidden md:flex items-center space-x-6">
             <a
-              href="tel:+390331123456"
+              href="tel:+14402600286"
               className="flex items-center gap-2 text-white/90 hover:text-white transition-colors duration-200 text-sm font-semibold tracking-wider"
             >
               <Phone className="h-4 w-4" />
-              <span>+39 0331 123456</span>
+              <span>(440) 260-0286</span>
             </a>
             <button className="relative p-2 text-white/90 hover:text-white transition-colors duration-200">
               <ShoppingBag className="h-5 w-5" />
@@ -148,11 +148,11 @@ export default function Header() {
           </Link>
           <div className="pt-4 border-t border-white/10 flex flex-col gap-4">
             <a
-              href="tel:+390331123456"
+              href="tel:+14402600286"
               className="flex items-center gap-3 px-3 py-2 text-white font-semibold tracking-wide"
             >
               <Phone className="h-5 w-5 text-cream" />
-              <span>+39 0331 123456</span>
+              <span>(440) 260-0286</span>
             </a>
             <Link
               href="#reservation"

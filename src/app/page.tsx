@@ -13,6 +13,7 @@ import {
   ShieldCheck, 
   MapPin, 
   Clock, 
+  Phone,
   Mail 
 } from "lucide-react";
 import Link from "next/link";
@@ -385,11 +386,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            {/* Location 1: Gallarate */}
-            <div className="relative rounded-3xl overflow-hidden h-[450px] group shadow-lg reveal-fade-left">
+            {/* Location 1: Berea */}
+            <div className="relative rounded-3xl overflow-hidden h-[520px] group shadow-lg reveal-fade-left">
               <img
                 src="/images/location_1.png"
-                alt="Cafe Ah-Roma Gallarate"
+                alt="Cafe Ah-Roma Berea"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -397,13 +398,24 @@ export default function Home() {
               <div className="absolute bottom-0 inset-x-0 p-8 flex flex-col items-start text-white">
                 <span className="inline-flex items-center gap-1 bg-primary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">
                   <MapPin className="h-3 w-3" />
-                  Gallarate Store
+                  Berea Store
                 </span>
-                <h3 className="font-serif text-3xl font-bold uppercase mb-2">We Are In Gallarate</h3>
-                <p className="text-sm text-white/80 font-sans font-light mb-1">Piazza della Libertà, 12, Gallarate VA, Italy</p>
-                <div className="flex items-center gap-1.5 text-xs text-white/70 font-sans font-bold uppercase tracking-wide mb-6">
-                  <Clock className="h-4 w-4 text-primary" />
-                  <span>Mon-Sun: 08:00 AM - 11:00 PM</span>
+                <h3 className="font-serif text-3xl font-bold uppercase mb-2">We Are In Berea</h3>
+                <p className="text-sm text-white/80 font-sans font-light mb-1">38 West Bridge Street | Berea, Ohio 44017</p>
+                <p className="text-xs text-white/60 font-sans font-light mb-2">Located in Berea Parkway Shops on the corner next to Giant Eagle</p>
+                <a href="tel:+14402600286" className="flex items-center gap-1.5 text-xs text-white/80 font-sans font-bold tracking-wide mb-2 hover:text-primary transition-colors">
+                  <Phone className="h-3.5 w-3.5 text-primary" />
+                  <span>(440) 260-0286</span>
+                </a>
+                <div className="flex flex-col gap-0.5 text-[11px] text-white/70 font-sans tracking-wide mb-5">
+                  <div className="flex items-start gap-1.5">
+                    <Clock className="h-3.5 w-3.5 text-primary mt-0.5 shrink-0" />
+                    <div className="flex flex-col gap-0.5">
+                      <span>Mon – Fri: 6:00 am – 9:00 pm</span>
+                      <span>Saturday: 6:30 am – 9:00 pm</span>
+                      <span>Sunday: 7:30 am – 9:00 pm</span>
+                    </div>
+                  </div>
                 </div>
                 <Link
                   href="https://maps.google.com"
@@ -416,11 +428,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Location 2: Legnano */}
-            <div className="relative rounded-3xl overflow-hidden h-[450px] group shadow-lg reveal-fade-right">
+            {/* Location 2: Cleveland */}
+            <div className="relative rounded-3xl overflow-hidden h-[520px] group shadow-lg reveal-fade-right">
               <img
                 src="/images/location_2.png"
-                alt="Cafe Ah-Roma Legnano"
+                alt="Cafe Ah-Roma Cleveland"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -428,13 +440,24 @@ export default function Home() {
               <div className="absolute bottom-0 inset-x-0 p-8 flex flex-col items-start text-white">
                 <span className="inline-flex items-center gap-1 bg-primary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-4">
                   <MapPin className="h-3 w-3" />
-                  Legnano Store
+                  Cleveland Store
                 </span>
-                <h3 className="font-serif text-3xl font-bold uppercase mb-2">We Are In Legnano</h3>
-                <p className="text-sm text-white/80 font-sans font-light mb-1">Corso Italia, 45, Legnano MI, Italy</p>
-                <div className="flex items-center gap-1.5 text-xs text-white/70 font-sans font-bold uppercase tracking-wide mb-6">
-                  <Clock className="h-4 w-4 text-primary" />
-                  <span>Mon-Sun: 08:00 AM - 11:00 PM</span>
+                <h3 className="font-serif text-3xl font-bold uppercase mb-2">We Are In Cleveland</h3>
+                <p className="text-sm text-white/80 font-sans font-light mb-1">2230 Euclid Avenue | Cleveland, Ohio 44115</p>
+                <p className="text-xs text-white/60 font-sans font-light mb-2">Located next to Trinity Cathedral and across from Cleveland State University</p>
+                <a href="tel:+12167718700" className="flex items-center gap-1.5 text-xs text-white/80 font-sans font-bold tracking-wide mb-2 hover:text-primary transition-colors">
+                  <Phone className="h-3.5 w-3.5 text-primary" />
+                  <span>(216) 771-8700</span>
+                </a>
+                <div className="flex flex-col gap-0.5 text-[11px] text-white/70 font-sans tracking-wide mb-5">
+                  <div className="flex items-start gap-1.5">
+                    <Clock className="h-3.5 w-3.5 text-primary mt-0.5 shrink-0" />
+                    <div className="flex flex-col gap-0.5">
+                      <span>Mon – Fri: 7:00 am – 7:00 pm</span>
+                      <span>Saturday: 8:00 am – 2:00 pm</span>
+                      <span>Sunday: Closed</span>
+                    </div>
+                  </div>
                 </div>
                 <Link
                   href="https://maps.google.com"
