@@ -6,7 +6,7 @@ interface MarqueeTickerProps {
 }
 
 const defaultItems = [
-  "FREE DELIVERY ON ORDERS OVER €30",
+  "FREE DELIVERY ON ORDERS OVER $30",
   "AVAILABLE FOR HOME DELIVERY",
   "ORDER ONLINE FOR 15% OFF",
   "FRESH INGREDIENTS DAILY",
